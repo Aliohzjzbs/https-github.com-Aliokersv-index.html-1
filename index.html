@@ -123,20 +123,55 @@
   pointer-events: none;
 }
 
-.red-animated {
-  font-weight: 700;
-  background: linear-gradient(90deg, #ff0000, #ff4d4d, #ff0000);
-  background-size: 200%;
+/* ===== نص متحرك بشكل احترافي (Cyber Animated Text) ===== */
+
+.cyber-text {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #00e6a8,
+    #00ffee,
+    #ff0055,
+    #ff0033,
+    #00e6a8
+  );
+  background-size: 400%;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: redFlow 3s linear infinite;
-  text-shadow: 0 0 6px rgba(255, 0, 0, 0.4), 0 0 12px rgba(255, 0, 0, 0.3);
+  color: transparent;
+  animation: cyberFlow 6s linear infinite;
+  font-weight: 700;
+  text-shadow:
+    0 0 6px rgba(0, 255, 200, 0.5),
+    0 0 12px rgba(255, 0, 80, 0.4),
+    0 0 18px rgba(0, 255, 255, 0.3);
 }
 
-@keyframes redFlow {
+@keyframes cyberFlow {
   0% { background-position: 0%; }
-  100% { background-position: 200%; }
-           }
+  100% { background-position: 400%; }
+}
+
+h1, h2, h3, h4, h5, p, .title, .brand, .darkbox, button, .uid, .dev div {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  }
+
+h1, h2, h3, h4, h5,
+p,
+.title,
+.brand,
+.darkbox,
+button,
+.uid,
+.stars,
+.dev div {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background: inherit;
+}
+  
+      
 </style>
 </head>
 <body>
@@ -344,6 +379,10 @@ function openProfile(){
 function closeProfile(){
   document.getElementById('profileModal').style.display='none';
 }
+
+  <script>
+document.querySelectorAll("h1, h2, h3, h4, h5, p, .title, .brand, .darkbox, button, .uid, .stars, .dev div")
+.forEach(el => el.classList.add("cyber-text"));
 </script>
 </body>
- </html>
+</html>
