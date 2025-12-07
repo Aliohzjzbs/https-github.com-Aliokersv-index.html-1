@@ -6,7 +6,11 @@
 <title>موقع فيديوهات المستخدم - Dark Web Maze</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root { --bg1:#06070b; --bg2:#071227; --accent:#00e6a8; }
+:root { 
+  --bg1:#2b0000;      /* خلفية غامقة حمراء */
+  --bg2:#4a0000;      /* خلفية أغمق */
+  --accent:#ff1a1a;   /* اللون الأساسي الأحمر */
+}
   *{box-sizing:border-box;font-family: 'Orbitron', sans-serif;}
   body{margin:0; min-height:100vh; background:linear-gradient(180deg,var(--bg1),#041226); color:#dfefff; overflow-x:hidden;}
   
@@ -122,6 +126,16 @@
   z-index: -1;
   pointer-events: none;
 }
+
+
+body, .title, .brand, .darkbox, p, h1, h2, h3 {
+  background: linear-gradient(90deg, #ff0000, #ff8400, #ff0000);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorFlow 4s linear infinite;
+}
+    
 </style>
 </head>
 <body>
