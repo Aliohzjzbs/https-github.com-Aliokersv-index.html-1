@@ -301,6 +301,22 @@
   object-fit:contain; /* يحافظ على الجودة بدون قص */
   background:#000;
 }
+
+/* إخفاء زر التحميل في متصفح Chrome و Edge */
+video::-webkit-media-controls-download-button {
+  display: none !important;
+}
+
+/* منع قائمة الخيارات (⋮) اللي فيها تحميل */
+video::-webkit-media-controls-overflow-button {
+  display: none !important;
+}
+
+/* تعطيل كليك يمين على الفيديو (اختياري) */
+video {
+  pointer-events: auto;
+    }
+  
 </style>
 </head>
 <body>
