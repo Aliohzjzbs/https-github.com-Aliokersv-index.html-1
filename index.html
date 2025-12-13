@@ -442,8 +442,16 @@ function playVideo(id, url){
   if (!container) return;
   const thumb = container.querySelector('.thumb')?.src || '';
   container.setAttribute('data-thumb', thumb);
-  container.innerHTML = `<video controls autoplay src="${url}" onended="videoEnded('${id}')"></video>`;
-  currentPlaying = id;
+  container.innerHTML = `
+<video 
+  controls 
+  autoplay 
+  controlsList="nodownload noplaybackrate"
+  disablePictureInPicture
+  playsinline
+  src="${url}"
+  onended="videoEnded('${id}')">
+</video>`;currentPlaying = id;
 }
 
 function videoEnded(id){
